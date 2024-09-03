@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-S714YMTGKR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-S714YMTGKR');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetlife (switchavi)</title>
+
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <main class="container">
+        <img src="/switchavi/images/profile.jpg" class="image" alt="">
+        <br>
+        <h2>Aviebaby</h2>
+        <div class="location">
+            <img src="/switchavi/images/location-pin.png" alt="">
+            <span id="location"></span>
+        </div>
+
+        <div class="buttons">
+            <a class="button" href="https://onlyfans.com/avie_baby/c9">My OF Page</a>
+            <a class="button" href="https://onlyfans.com/avie_baby/c9">Travel Blog</a>
+        </div>
+    </main>
+
+    <script>
+        // Location Functionality
+        const fetchLocation = async () => {
+            try {
+                const res = await fetch(
+                    "https://api.ipdata.co?api-key=a1ef42ed02be7e5fdcbdbfabe48aa5147a0bcf08e8531d9de9c786f6"
+                );
+                const data = await res.json();
+
+                document.querySelector(
+                    "#location"
+                ).innerText = `${data.city}, ${data.country_name}`; 
+            } catch (err) {
+                document.querySelector(
+                    "#location"
+                ).innerText = `Brisbane, Australia`; 
+            }
+        };
+
+        if (document.querySelector("#location")) fetchLocation();
+    </script>
+</body>
+</html>
