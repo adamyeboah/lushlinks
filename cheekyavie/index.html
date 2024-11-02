@@ -37,13 +37,13 @@
         const fetchLocation = async () => {
             try {
                 const res = await fetch(
-                    "https://api.ipdata.co?api-key=a1ef42ed02be7e5fdcbdbfabe48aa5147a0bcf08e8531d9de9c786f6"
+                    "https://ipinfo.io/?token=0d3ef1f50cc869"
                 );
                 const data = await res.json();
 
                 document.querySelector(
                     "#location"
-                ).innerText = `${data.city}, ${data.country_name}`; 
+                ).innerText = `${data.region}, ${data.country}`; 
             } catch (err) {
                 document.querySelector(
                     "#location"
