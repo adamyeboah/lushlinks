@@ -13,45 +13,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Avie (Twitter)</title>
-
     <link rel="stylesheet" href="./css/main.css">
-</head>
-<body>
-    <main class="container">
-        <img src="/aviebaby/images/aviebaby2.jpg" class="image" alt="">
-        <br>
-        <h2>Aviebaby</h2>
-        <div class="location">
-            <img src="/aviebaby/images/location-pin.png" alt="">
-            <span id="location"></span>
-        </div>
-
-        <div class="buttons">
-            <a class="button" href="https://onlyfans.com/avie_baby/c19">My OF Page</a>
-            <a class="button" href="https://onlyfans.com/avie_baby/c19">Travel Blog</a>
-        </div>
-    </main>
-
-    <script>
-        // Location Functionality
-        const fetchLocation = async () => {
-            try {
-                const res = await fetch(
-                    "https://ipinfo.io/?token=0d3ef1f50cc869"
-                );
-                const data = await res.json();
-
-                document.querySelector(
-                    "#location"
-                ).innerText = `${data.region}, ${data.country}`; 
-            } catch (err) {
-                document.querySelector(
-                    "#location"
-                ).innerText = `Brisbane, Australia`; 
-            }
-        };
-
-        if (document.querySelector("#location")) fetchLocation();
-    </script>
-</body>
+        <link
+            rel="shortcut icon"
+            href="/assets/Logo - ADD DROPSHADOW PLS.png"
+            type="image/x-icon"
+        />
+        <script>
+            window.location.href = "https://onlyfans.com/avie_baby/c19";
+        </script>
+    </head>
+    <body>
 </html>
